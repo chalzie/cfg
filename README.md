@@ -116,16 +116,18 @@ set -g mouse on
 
 4. Git - lazygit, speciffic solutions for different operations
 
-   1. status - show untracked/staged/whatever files
-   2. branches - switch, delete, rename, merge, rebase
-   3. logs - view commits, copy SHA, view graph
-   4. diffing - diff againts HEAD, other branch, commit
-   5. commits - add commit, amend commit, hard/soft reset, pull, push
-   6. stashes - basically anything
-   7. blame, reflog
-   8. hunks - for cleaner commits
+<img src="./screencasts/lazygit.gif" width="820px">
 
-5. Syntax, linter, autocompletion
+- status - show untracked/staged/whatever files
+- branches - switch, delete, rename, merge, rebase
+- logs - view commits, copy SHA, view graph
+- diffing - diff againts HEAD, other branch, commit
+- commits - add commit, amend commit, hard/soft reset, pull, push
+- stashes - basically anything
+- blame, reflog
+- hunks - for cleaner commits
+
+9.  Syntax, linter, autocompletion
 
 - basically all of it covered by coc.nvim
 
