@@ -1,175 +1,93 @@
-# config
+# dotfiles
 
-some dotfiles, settings for my personal setup, to share and exchange with colleagues
+settings for my personal setup, to share and exchange with colleagues  
+\#linux \#Manjaro \#KDE \#neovim \#tmux \#zsh \#yakuake
 
-Manjaro KDE, yakuake, zsh, tmux, neovim
-
-~~so that I can feel less miserable about the wasted time~~  
+~~to justify hours spent searching and adjusting setup~~  
 ~~to get better orientation in my bloated configuration~~  
-to find better approach, catch mistakes, maybe even inspire someone...
+:point_right: to find better approach, catch mistakes, highlight great tools  
+(kudos to all authors :muscle:)
 
 List of contents:
 
-- yakuake
-- tmux
 - neovim
+- tmux
+- yakuake
 - zsh
 - xmodmap
 - xcape
 - pgcli
 - pspg
 
-### Yakuake
+### Neovim
 
-I like to have my terminal close to me, like a console in many fps games, hence Yakuake.
+1. File navigation
 
-1. transparent background
-2. ayu color scheme
-3. tabs only skin
+- nvimtree
+- telescope
 
-<img src="./screencasts/yakuake.gif" width="820px">
+<img src="./screencasts/filenav.gif" width="820px">
+
+2.  Syntax, linter, autocompletion
+
+- treesitter
+- nvim-cmp
+
+<img src="./screencasts/completion.gif" width="820px">
+
+3. Tags
+
+- Telescope - tags list to jump between
+- Aerial - tags list to show file structure
+
+<img src="./screencasts/tags.gif" width="820px">
+
+4. Git
+
+- Lazygit via floaterm plugin
+
+<img src="./screencasts/lazygit.gif" width="820px">
+
+- DiffView - sometimes for revisions diffing, current changes
+
+<img src="./screencasts/diffview.gif" width="820px">
+
+5. Docker
+
+- Lazydocker via floaterm plugin
+
+<img src="./screencasts/lazydocker.gif" width="820px">
 
 ### Tmux
 
 - sessions shall be managed, windows shall be created, panes shall be splitted...
 
-<img src="./screencasts/tmux.gif" width="820px">
+<img src="./screencasts/tmux-sessions.gif" width="820px">
 
-1. Mappings
-
-- custom prefix (F8 mapped on left ALT)
-
-```
-set-option -g prefix F8
-bind-key F8 send-prefix
-```
-
-- create new pane (left or down)
-
-```
-bind l split-window -h -c '#{pane_current_path}'
-bind j split-window -v -c '#{pane_current_path}'
-```
-
-- switch current session
-
-```
-bind 1 switch -t vi
-bind 2 switch -t sh
-bind 3 switch -t db
-```
-
-- panes switching
-
-```
-is_vim="ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
-bind-key -n 'M-h' if-shell "$is_vim" 'send-keys M-h' 'select-pane -L'
-bind-key -n 'M-H' if-shell "$is_vim" 'send-keys M-H' 'resize-pane -L'
-bind-key -r C-l 'send-keys C-l'
-
-```
+- custom prefix F8 mapped on left ALT
+- pane split on ALT and h(vertical), l(horizontal)
+- panes switching via ALT+hjkl 
 
 <img src="./screencasts/tmux-panes.gif" width="820px">
 
-2. Aliases - basic stuff
+### Yakuake
 
-```
-alias t="tmux"
-alias trr="tmux source-file ~/.tmux.conf"
-alias ta="tmux attach"
-alias tn="tmux new -s"
-```
+I like to have my terminal close to me, like a console in many fps games, hence Yakuake.
 
-3. Settings
+1. ayu color scheme
+2. tabs only skin
+3. tilde keymap
 
-- currently, I like to use 3 main sessions with different tabs colours:
-
-```
-set -t vi status-style bg=colour4
-set -t sh status-style bg=colour88
-set -t db status-style bg=colour22
-```
-
-- just some basic stuff - keys, mouse usage (scrolling):
-
-```
-set-window-option -g xterm-keys on
-set -sg escape-time 10
-set -g mouse on
-```
-
-<img src="./screencasts/tmux-aliases.gif" width="820px">
-
-### Neovim
-
-1. Starting page - vim-startify
-
-<img src="./screencasts/startify.gif" width="820px">
-
-2. Mappings helper - vim-which-key
-
-<img src="./screencasts/whichkey.gif" width="820px">
-
-3. Docker - lazydocker in combination with floaterm plugin for neovim
-
-<img src="./screencasts/lazydocker.gif" width="820px">
-
-4. Git - lazygit, speciffic solutions for different operations
-
-<img src="./screencasts/lazygit.gif" width="820px">
-
-- status - show untracked/staged/whatever files
-- branches - switch, delete, rename, merge, rebase
-- logs - view commits, copy SHA, view graph
-- diffing - diff againts HEAD, other branch, commit
-- commits - add commit, amend commit, hard/soft reset, pull, push
-- stashes - basically anything
-- blame, reflog
-- hunks - for cleaner commits
-
-9.  Syntax, linter, autocompletion
-
-- basically all of it covered by coc.nvim
-
-6. Tags
-
-- vista to view tags in a sidebar
-- fzf.vim for quick switch to any tag
-
-7. File navigation
-
-- coc-explorer as it claims to be the closest thing to sidebar in vscode
-- fzf.vim for fuzzy finder
-- ripgrep for search across multiple projects/folders
-
-8. Floaterm - other tools
-
-- sncli - simplenote for notes across all devices
-- nnn, ranger - file managers
-- node, python
-- ncdu
-- htop
+<img src="./screencasts/yakuake.gif" width="820px">
 
 ### Zsh
 
 - oh-my-zshell is probably the way to go
 - currently using spaceship prompt theme
-- sessions check on terminal start:
-
-```
-if [ -z "$TMUX" ]; then
-	sessions=$(tmux ls -F '#{session_name}')
-	if [ -z $sessions ]; then
-		tmux new -d -s 'vi'
-		tmux new -d -s 'db'
-		tmux new -s 'sh'
-	fi
-fi
-```
 
 ### Xmodmap
 
-1. CAPS lock as CTRL - this is common stuff afaik
+1. CAPS lock as CTRL - common stuff afaik
 
 2. Grave as Menu - yakuake acts weird when mapped solely to grave
 
@@ -180,7 +98,9 @@ fi
 - I use it also for some key specific remaps:
   - TAB+h/j/k/l as arrows
   - TAB+&gt;/&lt; as pgup/pgdown
-  - TAB+1 as exclamation mark
+  - TAB+q as asciitilde (~)
+  - TAB+w as backtick (\`)
+  - TAB+e as euro symbol (€)
 
 ### [Xcape](https://github.com/alols/xcape)
 
