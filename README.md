@@ -1,7 +1,11 @@
-# dotfiles
+# Config
 
-settings for my personal setup, to share and exchange with colleagues  
-\#linux \#Manjaro \#KDE \#neovim \#tmux \#zsh \#yakuake
+Showcase of my personal setup, to share and exchange with colleagues.  
+
+Current main editor: VS Code (fan of a right tool for right job tho)  
+Side editor: Neovim + Yakuake + Tmux -> quick and always at hand, when needed  
+Current OS: Manjaro Linux with KDE (but aim to be ready to code everywhere)  
+\#vscode \#neovim \#linux \#Manjaro \#KDE \#tmux \#zsh \#yakuake
 
 ~~to justify hours spent searching and adjusting setup~~  
 ~~to get better orientation in my bloated configuration~~  
@@ -10,6 +14,7 @@ settings for my personal setup, to share and exchange with colleagues
 
 List of contents:
 
+- vscode
 - neovim
 - tmux
 - yakuake
@@ -19,7 +24,37 @@ List of contents:
 - pgcli
 - pspg
 
+
+### VS Code
+
+- reliable cross platform editor with plenty of useful extensions  
+
+1. GUI
+
+<img src="./images/vscode.png" width="820px">
+
+- Ayu Mirage bordered theme with Hack font and Vim mode  
+
+2. Keymaps
+
+- basically, my config is just trying to copy keymaps from Neovim  
+- mainly to, again, eliminate need for mouse (ain't nobody got time for that)  
+
+3. Terminal  
+
+- not really using the terminal here  
+- only for lazydocker and lazygit (they are awesome and I got used to them)  
+
+4. Interesting extensions  
+
+- Settings Sync - backup of settings  
+- Live Share - collaborate with colleagues  
+- Project Manager - quickly switch between projects  
+- Tailwind CSS IntelliSense - tailwind css autocomplete  
+
 ### Neovim
+
+Not really a fanatic for VIM or anything, I just really like to spend the 1.8s of time I save everyday on something beneficial like spend it with my family... or with hookers snorting cocaine, whatever...
 
 1. File navigation
 
