@@ -1,4 +1,4 @@
-# Config
+# Config (deprecated)
 
 Showcase of my personal setup, to share and exchange with colleagues.  
 
