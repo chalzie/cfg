@@ -1,4 +1,10 @@
-# Config (deprecated)
+# Config
+
+## Update 2023
+- VsCode as a main IDE, Neovim on Yakuake for the CLI, database operations etc.
+- ayu theme -> one dark pro
+- lazygit (mostly reflog, renaming...) with vscode's gitlens mainly for git stuff
+- ...
 
 Showcase of my personal setup, to share and exchange with colleagues.  
 
@@ -124,7 +130,7 @@ I like to have my terminal close to me, like a console in many fps games, hence 
 
 1. CAPS lock as CTRL - common stuff afaik
 
-2. Grave as Menu - yakuake acts weird when mapped solely to grave
+2. Grave (tilde) as Menu - yakuake acts weird when mapped solely to grave (tilde) key
 
 3. TAB as Mode_switch - might be weird, idk
 
