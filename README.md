@@ -1,165 +1,190 @@
 # Config
 
-## Update 2023
-- VsCode as a main IDE, Neovim on Yakuake for the CLI, database operations etc.
-- ayu theme -> one dark pro
-- lazygit (mostly reflog, renaming...) with vscode's gitlens mainly for git stuff
-- ...
+A showcase of my personal development setup, shared to exchange ideas with colleagues and document my workflow.
 
-Showcase of my personal setup, to share and exchange with colleagues.  
+## Overview
 
-Current main editor: VS Code (fan of a right tool for right job tho)  
-Side editor: Neovim + Yakuake + Tmux -> quick and always at hand, when needed  
-Current OS: Manjaro Linux with KDE (but aim to be ready to code everywhere)  
-\#vscode \#neovim \#linux \#Manjaro \#KDE \#tmux \#zsh \#yakuake
+**Current Main Editor:** Cursor (with AI-powered autocompletion and agents)  
+**Side Editor:** Neovim + Yakuake + Tmux (quick and always at hand when needed)  
+**OS:** Manjaro Linux with KDE (but aiming to be ready to code everywhere)  
 
-~~to justify hours spent searching and adjusting setup~~  
-~~to get better orientation in my bloated configuration~~  
-:point_right: to find better approach, catch mistakes, highlight great tools  
-(kudos to all authors :muscle:)
+<img src='./images/cursor.png' width="820">
 
-List of contents:
+**Tags:** vscode, neovim, linux, Manjaro, KDE, tmux, zsh, yakuake
 
-- vscode
-- neovim
-- tmux
-- yakuake
-- zsh
-- xmodmap
-- xcape
-- pgcli
-- pspg
+## Recent Updates
+
+### 2025 (AI Era)
+- **Cursor** instead of VS Code for faster coding with autocompletion and AI agents
+- occasional use of **Gemini CLI/Claude Code** (currently only free tier Gemini)
+- standard use of **ChatGPT/Gemini** web-based tools
+
+### 2023
+- **VS Code** as main IDE, **Neovim** on Yakuake for CLI, database operations, etc.
+- Theme change: Ayu → One Dark Pro
+- **Lazygit** (mostly reflog, renaming...) with VS Code's GitLens mainly for git operations
+
+## Purpose
+
+To find better approaches, catch mistakes, and highlight great tools.
+Kudos to all the authors! 💪
+
+## Table of Contents
+
+- [VS Code](#vs-code)
+- [Neovim](#neovim)
+- [Tmux](#tmux)
+- [Yakuake](#yakuake)
+- [Zsh](#zsh)
+- [Xmodmap](#xmodmap)
+- [Xcape](#xcape)
+- [Pgcli](#pgcli)
+- [Pspg](#pspg)
 
 
 ### VS Code
 
-- reliable cross platform editor with plenty of useful extensions  
+A reliable cross-platform editor with plenty of useful extensions.
 
-1. GUI
+#### 1. GUI
 
-<img src="./images/vscode.png" width="820px">
+<img src="./images/vscode.png" width="820">
 
-- Ayu Mirage bordered theme with Hack font and Vim mode  
+- **Theme:** Ayu Mirage bordered theme with Hack font and Vim mode
 
-2. Keymaps
+#### 2. Keymaps
 
-- basically, my config is just trying to copy keymaps from Neovim  
-- mainly to, again, eliminate need for mouse (ain't nobody got time for that)  
+- my configuration tries to replicate Neovim keymaps
+- mainly to eliminate the need for mouse usage (ain't nobody got time for that)
 
-3. Terminal  
+#### 3. Terminal
 
-- not really using the terminal here  
-- only for lazydocker and lazygit (they are awesome and I got used to them)  
+- not really using the integrated terminal here
+- only for **lazydocker** and **lazygit** (they are awesome and I got used to them)
 
-4. Interesting extensions  
+#### 4. Interesting Extensions
 
-- Settings Sync - backup of settings  
-- Live Share - collaborate with colleagues  
-- Project Manager - quickly switch between projects  
-- Tailwind CSS IntelliSense - tailwind css autocomplete  
+- **Settings Sync** - backup of settings
+- **Live Share** - collaborate with colleagues
+- **Project Manager** - quickly switch between projects
+- **Tailwind CSS IntelliSense** - tailwind CSS autocomplete
 
 ### Neovim
 
-Not really a fanatic for VIM or anything, I just really like to spend the 1.8s of time I save everyday on something beneficial like spend it with my family... or with hookers snorting cocaine, whatever...
+Not really a Vim fanatic, but I appreciate the efficiency gains. Every second saved counts! ⚡
 
-1. File navigation
+#### 1. File Navigation
 
-- nvimtree
-- telescope
+- **nvim-tree** - file explorer
+- **Telescope** - fuzzy finder
 
 <img src="./screencasts/filenav.gif" width="820px">
 
-2.  Syntax, linter, autocompletion
+#### 2. Syntax, Linter, Autocompletion
 
-- treesitter
-- nvim-cmp
+- **Treesitter** - syntax highlighting
+- **nvim-cmp** - autocompletion
 
 <img src="./screencasts/completion.gif" width="820px">
 
-3. Tags
+#### 3. Tags
 
-- Telescope - tags list to jump between
-- Aerial - tags list to show file structure
+- **Telescope** - tags list to jump between definitions
+- **Aerial** - tags list to show file structure
 
 <img src="./screencasts/tags.gif" width="820px">
 
-4. Git
+#### 4. Git
 
-- Lazygit via floaterm plugin
+- **Lazygit** via floaterm plugin
 
 <img src="./screencasts/lazygit.gif" width="820px">
 
-- DiffView - sometimes for revisions diffing, current changes
+- **DiffView** - for revision diffing and current changes
 
 <img src="./screencasts/diffview.gif" width="820px">
 
-5. Docker
+#### 5. Docker
 
-- Lazydocker via floaterm plugin
+- **Lazydocker** via floaterm plugin
 
 <img src="./screencasts/lazydocker.gif" width="820px">
 
 ### Tmux
 
-- sessions shall be managed, windows shall be created, panes shall be splitted...
+Sessions shall be managed, windows shall be created, panes shall be split...
 
 <img src="./screencasts/tmux-sessions.gif" width="820px">
 
-- custom prefix F8 mapped on left ALT
-- pane split on ALT and h(vertical), l(horizontal)
-- panes switching via ALT+hjkl 
+**Keybindings:**
+- custom prefix **F8** mapped to left **ALT**
+- pane split: **ALT+h** (vertical), **ALT+l** (horizontal)
+- pane switching: **ALT+hjkl**
 
 <img src="./screencasts/tmux-panes.gif" width="820px">
 
 ### Yakuake
 
-I like to have my terminal close to me, like a console in many fps games, hence Yakuake.
+I like to have my terminal close at hand, like a console in many FPS games, hence Yakuake.
 
-1. ayu color scheme
-2. tabs only skin
+**Configuration:**
+1. **Ayu** color scheme
+2. tabs-only skin
 3. tilde keymap
 
 <img src="./screencasts/yakuake.gif" width="820px">
 
 ### Zsh
 
-- oh-my-zshell is probably the way to go
-- currently using spaceship prompt theme
+- **Oh My Zsh** - probably the way to go
+- currently using **Spaceship** prompt theme
 
 ### Xmodmap
 
-1. CAPS lock as CTRL - common stuff afaik
+#### 1. CAPS Lock as CTRL
 
-2. Grave (tilde) as Menu - yakuake acts weird when mapped solely to grave (tilde) key
+Common remapping for better ergonomics.
 
-3. TAB as Mode_switch - might be weird, idk
+#### 2. Grave (Tilde) as Menu
+
+Yakuake acts weird when mapped solely to the grave (tilde) key.
+
+#### 3. TAB as Mode_switch
+
+Might be unconventional, but it works for me.
 
 - gives option to use third and fourth level of keys
-- can be used for layout switching just for one key press
-- I use it also for some key specific remaps:
-  - TAB+h/j/k/l as arrows
-  - TAB+&gt;/&lt; as pgup/pgdown
-  - TAB+q as asciitilde (~)
-  - TAB+w as backtick (\`)
-  - TAB+e as euro symbol (€)
+- can be used for layout switching with just one key press
+- I also use it for some key-specific remaps:
+  - **TAB+h/j/k/l** → arrow keys
+  - **TAB+&gt;/&lt;** → page up/page down
+  - **TAB+q** → ASCII tilde (~)
+  - **TAB+w** → backtick (\`)
+  - **TAB+e** → euro symbol (€)
 
 ### [Xcape](https://github.com/alols/xcape)
 
-1. ESC on CAPS - also common stuff afaik
+#### 1. ESC on CAPS
 
-2. F8 on left ALT - my tmux prefix, also CTRL+ALT now provides nice overview of virtual desktops (KDE)
+Common remapping for Vim users.
 
-3. TAB on TAB - getting back the remapped default TAB behaviour
+#### 2. F8 on Left ALT
+
+My tmux prefix. Also, **CTRL+ALT** now provides a nice overview of virtual desktops (KDE).
+
+#### 3. TAB on TAB
+
+Getting back the remapped default TAB behavior.
 
 ### [Pgcli](https://www.pgcli.com)
 
-- CLI for Postgres
+- CLI for PostgreSQL
 - autocompletion and syntax highlighting
 - saved queries
-- \h shows syntax helping menu
-- for me, to use with pspg pager:
+- `\h` shows syntax help menu
+- configured to use with **pspg** pager:
 
-```
+```ini
 pager = /usr/bin/pspg --rr=2 --quit-if-one-screen --ignore-case --pgcli-fix
 ```
 
@@ -167,4 +192,4 @@ pager = /usr/bin/pspg --rr=2 --quit-if-one-screen --ignore-case --pgcli-fix
 
 - cool pager supporting tabular data
 - provides sorting, column name search, query results saving
-- multiple themes to choose
+- multiple themes to choose from
